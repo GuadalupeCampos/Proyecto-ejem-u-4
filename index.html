@@ -10,6 +10,11 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script type="module" src="./assets/js/script.js"></script>
   </head>
@@ -69,7 +74,7 @@
       aria-hidden="true"
     >
       <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content bg-dark text-light">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">
               Iniciar sesión
@@ -81,16 +86,37 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+          <div class="modal-body">
+            <!--  
+            <form class="" id="signin-form">
+              <div class="mb-3">
+                <label for="signin-email" class="form-label"> correo</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Ingrese su correo"
+                  id="signin-email"
+                />
+              </div>
+
+              <div class="mb-4">
+                <label for="signin-password" class="form-label">
+                  contraseña</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Ingrese una contraseña"
+                  id="signin-password"
+                />
+              </div>
+
+              <div>
+                <button type="submit" class="btn btn-primary">
+                  Iniciar sesión
+                </button>
+              </div>
+            </form>-->
           </div>
         </div>
       </div>
@@ -104,7 +130,7 @@
       aria-hidden="true"
     >
       <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content bg-dark text-light">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">Registrarse</h1>
             <button
@@ -114,16 +140,38 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+          <div class="modal-body">
+            <form class="" id="signup-form">
+              <div class="mb-3">
+                <label for="signup-email" class="form-label"> correo</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Ingrese su correo"
+                  id="signup-email"
+                />
+              </div>
+
+              <div class="mb-4">
+                <label for="signup-password" class="form-label">
+                  contraseña</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Ingrese una contraseña"
+                  id="signup-password"
+                />
+              </div>
+
+              <div>
+                <input
+                  type="submit"
+                  class="btn btn-primary"
+                  value="Registrarse"
+                />
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -132,6 +180,11 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
   </body>
 </html>
