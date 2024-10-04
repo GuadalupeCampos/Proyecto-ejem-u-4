@@ -18,7 +18,13 @@ signupForm.addEventListener("submit", async (e) => {
       password
     );
     showMessage("Usuario registrado", "success");
-    console.log(userCredentials);
+
+    // Cerrar el modal
+    const signupModal = document.querySelector("#signup-modal");
+    const modal = bootstrap.Modal.getInstance(signupModal);
+    modal.hide();
+    //Limpiar el formulario
+    signupForm.reset();
   } catch (error) {
     console.log(error);
 
