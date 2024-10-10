@@ -10,6 +10,11 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link
       rel="stylesheet"
       type="text/css"
@@ -55,7 +60,9 @@
                 >
               </li>
               <li class="nav-item logged-in">
-                <a class="nav-link" id="logout" href="#">Cerrar sesión</a>
+                <a class="nav-link" id="logout" href="#">
+                  Cerrar sesión <i class="bi bi-box-arrow-down-right"></i
+                ></a>
               </li>
             </ul>
           </div>
@@ -71,7 +78,11 @@
           class="w-50 border border-2 rounded-3 p-3"
           id="task-form"
         >
-          <div class="mb-3"><h4>Agregar una nueva tarea</h4></div>
+          <div class="mb-3">
+            <h4 id="form-title">
+              <i class="bi bi-book"></i> Agregar una nueva tarea
+            </h4>
+          </div>
           <hr />
           <div class="mb-3">
             <label for="title" class="form-label">Título</label>
@@ -165,7 +176,9 @@
             </form>
             <hr />
             <div>
-              <button class="btn btn-info" id="google-btn">Google</button>
+              <button class="btn btn-info" id="google-btn">
+                <i class="bi bi-google"></i> Google
+              </button>
             </div>
           </div>
         </div>
