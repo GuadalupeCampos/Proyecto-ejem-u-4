@@ -13,7 +13,7 @@ export const checkLogin = (user) => {
     saludo.textContent = `Bienvenid@ ${user.email}`;
 
     // Cargamos las tareas
-    setupTasks();
+    setupTasks(user);
   } else {
     LoggedOut.forEach((element) => (element.style.display = "block"));
     LoggedIn.forEach((element) => (element.style.display = "none"));
