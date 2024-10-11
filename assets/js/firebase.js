@@ -33,8 +33,20 @@ export const auth = getAuth(app);
 export const db = getFirestore();
 
 // Operación CRUD
-export const createTask = (title, description, userName, userImage) =>
-  addDoc(collection(db, "tasks"), { title, description, userName, userImage });
+export const createTask = (
+  title,
+  description,
+  userName,
+  userImage,
+  userEmail
+) =>
+  addDoc(collection(db, "tasks"), {
+    title,
+    description,
+    userName,
+    userImage,
+    userEmail,
+  });
 
 export const onGetTask = (callback) =>
   onSnapshot(collection(db, "tasks"), callback);
