@@ -55,6 +55,10 @@ export const setupTasks = (user) => {
 
     querySnapshot.forEach((doc) => {
       const data = doc.data();
+      let formattedCreationTime = "";
+      if (data.userFecha) {
+        formattedCreationTime = data.userFecha;
+      }
 
       tasksHtml += `
       <article class="task-container border border-2 rounded-2 p-3 my-3">
@@ -62,8 +66,11 @@ export const setupTasks = (user) => {
           <div class="d-flex align-items-center gap-3">
             <img class="task-profile-picture rounded-circle" src="${
               data.userImage
+                ? data.userImage
+                : "./assets/img/defaultProfile.png"
             }" alt="${data.userName}" />
             <p class="m-0">${data.userName}</p>
+ <p>Publicado el: ${data.userFecha}</p>
           </div>
           ${
             user.email === data.userEmail
@@ -74,7 +81,7 @@ export const setupTasks = (user) => {
               : `<div></div>`
           }
         </header>
-        <hr />
+        <hr /> 
         <h4>${data.title}</h4>
         <p>${data.description}</p>
       </article>

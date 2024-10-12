@@ -1,6 +1,9 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
+import {
+  getAuth,
+  updateProfile,
+} from "https://www.gstatic.com/firebasejs/10.14.0/firebase-auth.js";
 import {
   getFirestore,
   collection,
@@ -46,6 +49,7 @@ export const createTask = (
     userName,
     userImage,
     userEmail,
+    userFecha: new Date().toLocaleString(),
   });
 
 export const onGetTask = (callback) =>
@@ -57,3 +61,5 @@ export const updateTask = (id, newData) =>
   updateDoc(doc(db, "tasks", id), newData);
 
 export const deleteTask = (id) => deleteDoc(doc(db, "tasks", id));
+
+export { updateProfile };
